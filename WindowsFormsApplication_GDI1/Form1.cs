@@ -14,7 +14,7 @@ namespace WindowsFormsApplication_GDI1
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             // GDI+
-            DrawUsingGdiPlus(e);
+            //DrawUsingGdiPlus(e);
 
             // GDI
             DrawUsingGdi(e);
@@ -22,11 +22,11 @@ namespace WindowsFormsApplication_GDI1
 
         private unsafe void DrawUsingGdi(PaintEventArgs e)
         {
-            // Get handle to device context.
+            // Get handle to device context
             IntPtr hdc = e.Graphics.GetHdc();
 
-            // Draw rectangle with GDI using default pen.
-            GDI.Rectangle(hdc, 10, 70, 110, 120);
+            // Original example - Draw rectangle with GDI using default pen
+            //GDI.Rectangle(hdc, 10, 70, 110, 120);
 
             // Create new pen to match web site
             int newPenColor = 0x00913d0b; // 0x00BBGGRR from frsoft.com
@@ -37,9 +37,25 @@ namespace WindowsFormsApplication_GDI1
 
             // Draw lines to create logo
             GDI.POINT point = new GDI.POINT();
-            GDI.MoveToEx(hdc, 100, 0, &point);
-            GDI.LineTo(hdc, 0, 100);
-            GDI.LineTo(hdc, 100, 200);
+            // Tic-tac-toe
+            GDI.MoveToEx(hdc, 0, 20, &point);
+            GDI.LineTo(hdc, 50, 20);
+            GDI.MoveToEx(hdc, 0, 30, &point);
+            GDI.LineTo(hdc, 50, 30);
+            GDI.MoveToEx(hdc, 20, 0, &point);
+            GDI.LineTo(hdc, 20, 50);
+            GDI.MoveToEx(hdc, 30, 0, &point);
+            GDI.LineTo(hdc, 30, 50);
+            // Corners
+            GDI.MoveToEx(hdc, 0, 20, &point);
+            GDI.LineTo(hdc, 20, 0);
+            GDI.MoveToEx(hdc, 30, 0, &point);
+            GDI.LineTo(hdc, 50, 20);
+            GDI.MoveToEx(hdc, 50, 30, &point);
+            GDI.LineTo(hdc, 30, 50);
+            GDI.MoveToEx(hdc, 20, 50, &point);
+            GDI.LineTo(hdc, 0, 30);
+            
 
             // Clean up
             GDI.SelectObject(hdc, hPrevPen);
