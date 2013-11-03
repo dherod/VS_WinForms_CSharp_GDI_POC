@@ -1,8 +1,8 @@
 # Proof of Concept: GDI
 
-Yup, that's right, getting low with GDI (1985), not GDI+ (2001), nor DirectWrite/Direct2D (2008). 
+Yup, that's right, getting low with GDI (1985), not GDI+ (2001) nor DirectWrite/Direct2D (2008). 
 
-Needed to demonstrate usage, so rolled POC using Visual Studio 2012 and Win Forms, and dllimported gdi32.dll in order to draw using GDI.
+Wanted demonstartion of usage with modern tools, so rolled POC using Visual Studio 2012 and Win Forms in CSharp, and dllimported gdi32.dll in order to draw using GDI.  The crux of this was getting the device context in the paint event and creating the mapping layer to the external GDI functions - see GDI.cs.
 
 Here's the initial drawing output from this POC (hopefully timely!):
 
