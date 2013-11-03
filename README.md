@@ -6,7 +6,7 @@ Needed to demonstrate usage, so rolled POC using Visual Studio 2012 and Win Form
 
 ### References:
 
-[*MSDN - Graphics.GetHdc Method*](http://msdn.microsoft.com/en-us/library/9z5820hw(v=vs.110).aspx)
+[*MSDN - Graphics.GetHdc Method*](http://msdn.microsoft.com/en-us/library/9z5820hw.aspx)
 
-[*Legacy Graphics - Windows GDI*](http://msdn.microsoft.com/en-us/library/windows/desktop/dd145203(v=vs.85).aspx)
+[*Legacy Graphics - Windows GDI*](http://msdn.microsoft.com/en-us/library/windows/desktop/dd145203.aspx)
 
